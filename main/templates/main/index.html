@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+    main page
+{% endblock %}
+{% block content %}
+    {% for el in products %}
+
+        <div class="container bg-dark rounded mb-3">
+            <p>{{ el.model }}</p>
+            <p>{{ el.description }}</p>
+            {{ el.image }}
+        </div>
+<hr class="container">
+
+    {% endfor %}
+{% endblock %}
